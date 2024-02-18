@@ -66,7 +66,7 @@ export default function Login() {
           <div className='text-md mt-5 text-right'>
             Email
           </div>
-          <input name="email" onChange={(e) => setEmail(e.target.value)} value={email} className='py-2 px-4 mb-4 mt-2 bg-black border-2 border-slate-200 rounded-md md:w-2/12 w-3/4' required />
+          <input name="email" onChange={(e) => setEmail(e.target.value)} value={email} className='py-2 px-4 mb-4 mt-2 bg-black text-white border-2 border-slate-200 rounded-md md:w-2/12 w-3/4' required />
           <button onClick={handleSignIn} className='bg-blue-300 text-black rounded py-2 px-4 mb-4 mt-5 '>Sign in</button>
           <div className='text-xl mb-2 mt-2'>
             Or
