@@ -11,6 +11,7 @@ export const pdf = pgTable("pdf", {
   name: text("name").notNull(),
   url: text("url").notNull(),
   key: text("key").notNull(),
+  content: text("content"),
   userId: serial("user_id").references(() => users.id),
   // filePath: text("file_path").notNull(),
 });
