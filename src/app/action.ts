@@ -83,7 +83,7 @@ export async function chatwithOpenAI(content: string, question: string) {
         content: `${question}`,
       },
     ],
-    temperature: 0.7,
+    temperature: 0.5,
     max_tokens: 400,
     top_p: 1,
   });
