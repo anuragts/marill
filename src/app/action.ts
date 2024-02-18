@@ -69,7 +69,7 @@ export async function chatwithOpenAI(content: string, question: string) {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  console.log(content);
+  // console.log(content);
 
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
@@ -88,7 +88,7 @@ export async function chatwithOpenAI(content: string, question: string) {
     top_p: 1,
   });
 
-  console.log(response.choices[0].message.content);
+  // console.log(response.choices[0].message.content);
 
   return response.choices[0].message.content;
 }

@@ -76,7 +76,7 @@ export async function chatwithOpenAI(content,question){
     top_p: 1,
   });
   
-  console.log(response.choices[0].message.content);
+  // console.log(response.choices[0].message.content);
   
   return response;
   }
