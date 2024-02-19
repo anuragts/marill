@@ -57,7 +57,7 @@ export async function readPDF(url: string, file_name: string) {
 
   const data = fs.readFileSync(filePath);
   const content = await pdfParse(data);
-  //   console.log(content.text);
+    console.log("pdf read \n ",content.text);
 
   fs.unlinkSync(filePath);
 
@@ -69,7 +69,7 @@ export async function chatwithOpenAI(content: string, question: string) {
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  // console.log(content);
+  console.log("content openai action \n",content);
 
   const response = await openai.chat.completions.create({
     model: "gpt-3.5-turbo",
