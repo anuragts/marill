@@ -14,6 +14,8 @@ import OpenAI from "openai";
 
 export async function addFiletoDB(name: string, url: string, key: string) {
   const content = await doPDF(url, "temp.pdf");
+
+  console.log("content \n", content);
   const result = await db.insert(pdf).values({
     key,
     name,
@@ -57,7 +59,7 @@ export async function readPDF(url: string, file_name: string) {
 
   const data = fs.readFileSync(filePath);
   const content = await pdfParse(data);
-    console.log("pdf read \n ",content.text);
+  console.log("pdf read \n ",content.text);
 
   fs.unlinkSync(filePath);
 
