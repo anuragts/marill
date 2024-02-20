@@ -25,16 +25,10 @@ const Upload = () => {
 
     const { url } = await response.json();
     console.log("url", url);
-    // await fetch(url, {
-    //   method: "PUT",
-    //   mode: "cors",
-    //   headers: {
-    //     "Access-Control-Allow-Origin": "*",
-    //     "Access-Control-Allow-Methods": "OPTIONS, POST, GET, PUT, DELETE",
-    //     "Access-Control-Allow-Headers": "Content-Type, Accept",
-    //   },
-    //   body: formData,
-    // });
+    await fetch(url, {
+      method: "PUT",
+      body: formData,
+    });
 
     try {
         await axios.put(url, formData);
